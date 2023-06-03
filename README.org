@@ -1,0 +1,2 @@
+* Projeto de Jogo SHMUP (Shoot 'em Up)
+Alunos: Leonidas Pedro Baptistelli, Rafael Henrique Moretto Lima Ferraz e Ronan Ferreira Lima Duarte
