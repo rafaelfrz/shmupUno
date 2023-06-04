@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsd4rxth6yvel"]
+
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_dlclg"]
+[ext_resource type="Texture2D" uid="uid://djvh6juwbuoel" path="res://assets/NicePng_spaceship-png_138961.png" id="2_cqc7n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o3t4s"]
+radius = 8.0
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_dlclg")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(0, -1.19209e-07)
+scale = Vector2(0.0643431, 0.061492)
+texture = ExtResource("2_cqc7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_o3t4s")
