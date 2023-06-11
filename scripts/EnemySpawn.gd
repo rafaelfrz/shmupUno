@@ -1,17 +1,14 @@
-extends CharacterBody2D
+extends Node2D
 
-var speed = 200
+var enemy_scene = load("res://scenes/enemy.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var enemy = enemy_scene.instantiate()
+	add_child(enemy)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
-	var direction = Input.get_vector("left", "right", "up", "down")
-	velocity = direction * speed
-
-	move_and_slide()
-
-
+func _process(delta):
+	pass
