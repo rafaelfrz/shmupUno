@@ -23,3 +23,8 @@ script = ExtResource("1_6dfkl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kn3yh")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-9, -8)
+target_position = Vector2(18, 17)
+collide_with_areas = true

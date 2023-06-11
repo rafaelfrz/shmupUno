@@ -8,5 +8,9 @@ position = Vector2(269, 116)
 script = ExtResource("1_57pik")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1.05859, 0.148438)
+scale = Vector2(0.354492, 0.283203)
 texture = ExtResource("2_mdjr7")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
