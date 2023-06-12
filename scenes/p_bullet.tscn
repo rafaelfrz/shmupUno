@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://com76145k0mp0"]
+
+[ext_resource type="Script" path="res://scripts/p_bullet.gd" id="1_q3ux6"]
+[ext_resource type="Texture2D" uid="uid://diso1bielo7yx" path="res://assets/PC Computer - Touhou Chireiden Subterranean Animism - Bullets.png" id="2_bwqac"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ab1uf"]
+atlas = ExtResource("2_bwqac")
+region = Rect2(240, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kn3yh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ab1uf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="p_bullet" type="Node2D"]
+script = ExtResource("1_q3ux6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kn3yh")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-12, -11)
+target_position = Vector2(23, 23)
+collide_with_areas = true
