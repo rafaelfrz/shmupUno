@@ -2,17 +2,14 @@ extends Node2D
 
 var dir = Vector2(0, 0)
 
-
 func _ready():
 	pass 
-
-
-
 
 func _process(delta):
 	self.position += dir.rotated(self.rotation)
 	
 	if ($RayCast2D.is_colliding()):
+		print("hit")
 		get_tree().reload_current_scene()
 	pass
 	

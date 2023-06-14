@@ -18,5 +18,7 @@ func screen_exited():
 	get_parent().remove_child(self)
 	queue_free()
 
-
-
+func _on_area_2d_body_entered(body):
+	if body.has_method("handle_hit"):
+		body.handle_hit()
+	pass # Replace with function body.

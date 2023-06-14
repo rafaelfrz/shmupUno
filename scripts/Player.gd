@@ -8,7 +8,6 @@ var p_bullet = load("res://scenes/p_bullet.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	pass # Replace with function body.
 
 
