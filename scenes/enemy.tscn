@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ducvjcgrro8ev"]
+[gd_scene load_steps=4 format=3 uid="uid://ducvjcgrro8ev"]
 
 [ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_57pik"]
 [ext_resource type="Texture2D" uid="uid://quictx6or6ob" path="res://assets/SpaceShooterAssetPack_Ships.png" id="2_5sgkq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tj1i7"]
+size = Vector2(44, 33)
 
 [node name="Enemy" type="Node2D"]
 script = ExtResource("1_57pik")
@@ -15,5 +18,11 @@ region_enabled = true
 region_rect = Rect2(48, 64, 16, 16)
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_tj1i7")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://com76145k0mp0"]
+[gd_scene load_steps=7 format=3 uid="uid://com76145k0mp0"]
 
 [ext_resource type="Script" path="res://scripts/p_bullet.gd" id="1_q3ux6"]
-[ext_resource type="Texture2D" uid="uid://cy3geyjtnkp33" path="res://assets/SpaceShooterAssetPack_Projectiles.png" id="2_jds7w"]
+
+[ext_resource type="Texture2D" uid="uid://diso1bielo7yx" path="res://assets/PC Computer - Touhou Chireiden Subterranean Animism - Bullets.png" id="2_bwqac"]
+[ext_resource type="AudioStream" uid="uid://bq8h58h71pdgp" path="res://assets/sounds/mixkit-short-laser-gun-shot-1670.wav" id="3_ffe25"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ux0ai"]
 atlas = ExtResource("2_jds7w")
@@ -18,6 +21,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4alb"]
+size = Vector2(22, 24)
+
 [node name="p_bullet" type="Node2D"]
 script = ExtResource("1_q3ux6")
 
@@ -27,7 +33,15 @@ scale = Vector2(5.75, 5.5)
 sprite_frames = SubResource("SpriteFrames_w3tqo")
 frame_progress = 0.449166
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(-12, -12)
-target_position = Vector2(23, 23)
-collide_with_areas = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ffe25")
+autoplay = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_i4alb")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
