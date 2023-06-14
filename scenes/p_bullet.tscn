@@ -1,18 +1,20 @@
 [gd_scene load_steps=7 format=3 uid="uid://com76145k0mp0"]
 
 [ext_resource type="Script" path="res://scripts/p_bullet.gd" id="1_q3ux6"]
+
 [ext_resource type="Texture2D" uid="uid://diso1bielo7yx" path="res://assets/PC Computer - Touhou Chireiden Subterranean Animism - Bullets.png" id="2_bwqac"]
 [ext_resource type="AudioStream" uid="uid://bq8h58h71pdgp" path="res://assets/sounds/mixkit-short-laser-gun-shot-1670.wav" id="3_ffe25"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ab1uf"]
-atlas = ExtResource("2_bwqac")
-region = Rect2(240, 48, 24, 24)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_kn3yh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ux0ai"]
+atlas = ExtResource("2_jds7w")
+region = Rect2(24, 8, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w3tqo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ab1uf")
+"texture": SubResource("AtlasTexture_ux0ai")
 }],
 "loop": true,
 "name": &"default",
@@ -26,7 +28,11 @@ size = Vector2(22, 24)
 script = ExtResource("1_q3ux6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_kn3yh")
+texture_filter = 1
+scale = Vector2(5.75, 5.5)
+sprite_frames = SubResource("SpriteFrames_w3tqo")
+frame_progress = 0.449166
+
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ffe25")

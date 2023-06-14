@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs8ba2sl008y0"
-path="res://.godot/imported/lazer.png-24fa5dba34aa1f5602954607ecaafd3e.ctex"
+uid="uid://bhvdnvx40bxtl"
+path="res://.godot/imported/SpaceShooterAssetPack_BackGrounds.png-40c27d371c0774439f2d44bc4d1df4de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lazer.png"
-dest_files=["res://.godot/imported/lazer.png-24fa5dba34aa1f5602954607ecaafd3e.ctex"]
+source_file="res://assets/SpaceShooterAssetPack_BackGrounds.png"
+dest_files=["res://.godot/imported/SpaceShooterAssetPack_BackGrounds.png-40c27d371c0774439f2d44bc4d1df4de.ctex"]
 
 [params]
 

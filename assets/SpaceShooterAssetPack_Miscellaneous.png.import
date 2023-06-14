@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgdiv8fssh5pd"
-path="res://.godot/imported/NicePng_spaceship-png_138961.png-a422642be0abbd8c266e29362b371919.ctex"
+uid="uid://bnqx26r78a45h"
+path="res://.godot/imported/SpaceShooterAssetPack_Miscellaneous.png-cdc92c18a3467857238f6339f6bff98b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/NicePng_spaceship-png_138961.png"
-dest_files=["res://.godot/imported/NicePng_spaceship-png_138961.png-a422642be0abbd8c266e29362b371919.ctex"]
+source_file="res://assets/SpaceShooterAssetPack_Miscellaneous.png"
+dest_files=["res://.godot/imported/SpaceShooterAssetPack_Miscellaneous.png-cdc92c18a3467857238f6339f6bff98b.ctex"]
 
 [params]
 
