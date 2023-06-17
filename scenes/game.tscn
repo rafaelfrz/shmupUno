@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bjsw7wde3h5dr"]
 
 [ext_resource type="PackedScene" uid="uid://bsd4rxth6yvel" path="res://scenes/player.tscn" id="1_et1mr"]
-[ext_resource type="PackedScene" uid="uid://ducvjcgrro8ev" path="res://scenes/enemy.tscn" id="2_he0f0"]
+[ext_resource type="Script" path="res://scripts/EnemySpawn.gd" id="2_kcajd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbd5j"]
 size = Vector2(38, 768)
@@ -9,12 +9,9 @@ size = Vector2(38, 768)
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_et1mr")]
-<<<<<<< Updated upstream
 position = Vector2(510, 574)
 
 [node name="Enemy" parent="." instance=ExtResource("2_he0f0")]
-position = Vector2(499, 8)
-=======
 position = Vector2(672, 672)
 scale = Vector2(1.4, 1.4)
 
@@ -42,4 +39,4 @@ offset_left = 896.0
 offset_right = 1368.0
 offset_bottom = 768.0
 color = Color(0, 0, 0, 1)
->>>>>>> Stashed changes
+position = Vector2(565, 572)

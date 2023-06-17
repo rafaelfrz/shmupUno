@@ -1,13 +1,21 @@
 extends Node2D
 
+var dir = Vector2(0, 0)
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass 
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	self.position += Vector2(2, 1).rotated(self.rotation)
-	self.position.x += 1
+	self.position += dir.rotated(self.rotation)
+	
+	if ($RayCast2D.is_colliding()):
+		print("hit")
+		get_tree().reload_current_scene()
 	pass
+	
+func screen_exited():
+	get_parent().remove_child(self)
+	queue_free()
+
+
+

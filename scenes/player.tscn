@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://bsd4rxth6yvel"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_dlclg"]
-[ext_resource type="Texture2D" uid="uid://djvh6juwbuoel" path="res://assets/NicePng_spaceship-png_138961.png" id="2_cqc7n"]
+[ext_resource type="Texture2D" uid="uid://quictx6or6ob" path="res://assets/SpaceShooterAssetPack_Ships.png" id="2_tta57"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o3t4s"]
-radius = 8.0
+radius = 9.21954
 
 [node name="Player" type="Node2D"]
 
@@ -12,9 +12,14 @@ radius = 8.0
 script = ExtResource("1_dlclg")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(0, -1.19209e-07)
-scale = Vector2(0.0643431, 0.061492)
-texture = ExtResource("2_cqc7n")
+texture_filter = 3
+position = Vector2(-1.07288e-06, -2.38419e-07)
+rotation = -3.14159
+scale = Vector2(1.125, 1.125)
+texture = ExtResource("2_tta57")
+region_enabled = true
+region_rect = Rect2(32, 48, 16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" groups=["Player"]]
 shape = SubResource("CircleShape2D_o3t4s")
+debug_color = Color(0, 0, 0, 0.419608)

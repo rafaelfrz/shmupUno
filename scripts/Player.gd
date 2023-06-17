@@ -12,12 +12,25 @@ func get_input():
 	else:
 		speed = SPEED
 
+var starting_position
+
+var p_bullet = load("res://scenes/p_bullet.tscn")
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+func _process(delta):
+	if(Input.is_action_just_pressed("fire")):
+		var b = p_bullet.instantiate()
+		get_parent().add_child(b)
+		b.position = self.position
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
-<<<<<<< Updated upstream
-=======
-
+  
 func _slow_movement():
 	speed = 250
->>>>>>> Stashed changes

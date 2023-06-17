@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://com76145k0mp0"]
+
+[ext_resource type="Script" path="res://scripts/p_bullet.gd" id="1_q3ux6"]
+[ext_resource type="Texture2D" uid="uid://cy3geyjtnkp33" path="res://assets/SpaceShooterAssetPack_Projectiles.png" id="2_jds7w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ux0ai"]
+atlas = ExtResource("2_jds7w")
+region = Rect2(24, 8, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w3tqo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ux0ai")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="p_bullet" type="Node2D"]
+script = ExtResource("1_q3ux6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5.75, 5.5)
+sprite_frames = SubResource("SpriteFrames_w3tqo")
+frame_progress = 0.449166
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-12, -12)
+target_position = Vector2(23, 23)
+collide_with_areas = true
